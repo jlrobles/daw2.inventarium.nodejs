@@ -1,0 +1,14 @@
+extends ../../views/layout
+
+block content
+  - var _idOld = (item._idOld)?item._idOld:((item._id)?item._id:"");
+  .jumbotron
+    form(method='post')
+      input(type='hidden', name='_idOld', value='#{ _idOld }')
+      input(type='hidden', name='_id', value=item._id, placeholder="codi")
+      label
+        | Descripció
+        input(type='text', name='des', value=item.des, placeholder="nom del departament", required)
+      br
+      input.btn.btn-lg.btn-primary(type='submit', name='Submit')
+

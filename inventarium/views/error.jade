@@ -1,0 +1,13 @@
+extends layout
+
+block content
+ .alert.alert-danger(role="alert")
+  h1= message
+  h2= error.status
+
+  if(error.stack)
+      pre #{error.stack}
+  else
+      p Contacti amb al departament d'informàtica de la Merçè.
+
+ p Disculpi les molesties.

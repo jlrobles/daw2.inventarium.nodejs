@@ -1,0 +1,30 @@
+extends ../../views/layout
+
+block content
+  .row
+    .col-xs-offset-1.col-xs-9
+      a.btn.btn-xs.btn-success(href="/#{tblName}/c") nou
+    .col-xs-1
+      a.btn.btn-xs.btn-danger(href="/#{tblName}/dd") esborra taula
+  .jumbotron
+    .row
+      .col-xs-12.col-md-6
+        table.table.table-striped.table-hover
+          thead
+            tr.success
+              th codi
+              th descripció
+              th
+              th
+          tbody
+            each item, i in items
+              tr
+                td= item._id
+                td= item.des
+                td 
+                  a.btn.btn-xs.btn-danger(href="/#{tblName}/d/#{item._id}") esborra
+                td
+                  a.btn.btn-xs.btn-info(href="/#{tblName}/u/#{item._id}") editar
+// <tr class="active">...</tr>     success, warning, danger, info
+// <td class="active">...</td> th, success, warning, danger, info
+        

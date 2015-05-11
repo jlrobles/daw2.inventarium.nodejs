@@ -1,0 +1,15 @@
+extends ../../views/layout
+
+block content
+  .jumbotron
+    form( method='post')
+      label
+        | usuari 
+        input(type='text', name='usr', required)
+      br
+      label
+        | Contrasenya
+        input(type='password', name='pwd', required)
+      br
+      input.btn.btn-lg.btn-primary(type='submit', name='Submit')
+        

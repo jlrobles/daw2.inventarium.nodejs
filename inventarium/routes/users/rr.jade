@@ -1,0 +1,8 @@
+extends ../../views/layout
+
+block content
+  .jumbotron
+    each user, i in userlist
+      li
+        a.btn.btn-lg.btn-primary(href="./r#{user.id}")= user.usr
+        
